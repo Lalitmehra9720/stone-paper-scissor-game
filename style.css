@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("rock-scissor-and-paper-hand-sign-isolated-on-white-background.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#heading{
+    text-align: center;
+    text-decoration-line: underline;
+    margin: 20px auto;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    width: 100vw;
+    height: 50vh;
+}
+.userChoice, .computerChoice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+.userChoice{
+    border: 2px solid black;
+    background-color:rgba(103, 97, 97, 0.266);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+}
+h4{
+    text-align: center;
+}
+h1{
+    font-size: 3vw;
+}
+.computerChoice{
+    border: 2px solid black;
+    background-color: rgba(103, 97, 97, 0.266);
+    border-radius: 10px;
+}
+.stone, .paper, .scissor{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 5px auto;
+}
+.computerstone, .computerpaper, .computerscissor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+.computerstone{
+    background-color: rgb(224, 70, 101);
+    border-radius: 10px;
+}
+.computerpaper{
+    background-color: rgb(211, 217, 99);
+    border-radius: 10px;
+}
+.computerscissor{
+    background-color: rgb(65, 188, 219);
+    border-radius: 10px;
+}
+img{
+    border-radius: 50%;
+}
+.stone{
+    background-color: aquamarine;
+    transition: transform 0.1s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.images{
+    width:5vw;
+    border-radius: 50%;
+}
+.image{
+    width: 15vw;
+}
+.stone:active{
+    transform: scale(0.95); /* Shrinks the button to simulate a press */
+    background-color: rgb(46, 225, 165);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+.paper{
+    background-color: rgb(80, 80, 187);
+    transition: transform 0.1s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.paper:active{
+    transform: scale(0.95); /* Shrinks the button to simulate a press */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgb(37, 37, 159);
+}
+.scissor{
+    background-color: rgb(192, 94, 94);
+    transition: transform 0.1s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.scissor:active{
+    transform: scale(0.95); /* Shrinks the button to simulate a press */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgb(191, 29, 29);
+}
+.scorecard{
+    background-color: rgb(155, 88, 218);
+    width: 35vw;
+    height: 15vh;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: justify;
+    border: none;
+    border-radius: 10px;
+}
+#score{
+    font-size: 2vw;
+    font-weight: 400;
+    padding: 5px;
+    text-align: center;
+}
+#resetButton{
+    background-color: grey;
+    display: block;
+    height: 7vh;
+    width: 15vh;
+    box-sizing: border-box;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    border: none;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+#resetButton:active{
+    
+        transform: scale(0.95); /* Shrinks the button to simulate a press */
+        background-color: rgb(97, 97, 97);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    
+}
+@media (max-width: 680px){
+     .container{
+        flex-direction: column;
+        height: 100vh;justify-content:stretch;
+        height: auto;
+     }
+     .userChoice{
+        margin-bottom: 3vw;
+        width: 50vw;
+        height: 33vh;
+     }
+     .computerChoice{
+        width: 50vw;
+        height: 33vh;
+     }
+     #score{
+        font-size: 3vw;
+     }
+     .scorecard{
+        height:10vh;
+     }
+     #resetButton{
+        font-size: 2.5vw;
+        width:30vw;
+     }
+     .images{
+        width: 13vw;
+     }
+     
+}
+@media ( max-width:600px) and (min-width:1024px ){
+        .images{
+            width: 3vw;
+        }
+}
